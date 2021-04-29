@@ -1,0 +1,99 @@
+﻿<html>
+<head>
+<meta charset="UTF-8">
+<TITLE>계산기</TITLE>
+<STYLE>
+#number{
+text-align: center;
+left : 50%;
+}
+#number_button{
+text-align: center;
+width:50px;
+background-color : rgb(255 , 250 , 250)
+}
+#code_button{
+text-align: center;
+width:50px;
+background-color : rgb(141 , 142 , 143)
+}
+#zero_button{
+text-align: center;
+width:50px;
+background-color : rgb(101 , 101 , 255)
+}
+#zero{
+text-align: center;
+width:50px;
+background-color : rgb(255 , 255 , 255)
+}
+</STYLE>
+</Head>
+<body>
+    <script type="text/javascript">
+        function inputext(char){var number = document.getElementById("number");number.value += char;}
+        function remove(){var number = document.getElementById("number");number.value = "";}
+        function calculate(){var number = document.getElementById("number");number.value = eval(number.value);}
+        function sin(n) {return Math.sin(n);
+}
+        function cos(n) {return Math.cos(n);
+}
+        function tan(n) {return Math.tan(n);
+}
+        function PI() {return Math.PI;
+}
+        function !(n) {if (n==1) return 1;   else return n * fac(n-1);
+}
+        function 반올림(n) {return Math.round(n);}
+        function 제곱(x , y) {return Math.pow(x , y);
+}
+        function 루트(n) {return Math.sqrt(n);
+}
+    </script>
+<center>
+    <form class="cal">
+        <input type="text" id="number" value="" readonly size = 34>
+        <br/><br>
+        <input type="button" ID = "zero_button" value = "제곱" onclick="inputext('제곱(')">
+        <input type="button" ID = "zero_button" value = "sin" onclick="inputext('sin(')">
+        <input type="button" ID = "zero_button" value = "cos" onclick="inputext('cos(')">
+        <input type="button" ID = "zero_button" value = "tan" onclick="inputext('tan(')">
+        <input type="button" ID = "zero_button" value = "√" onclick="inputext('루트(')">
+        <br>
+        <input type="button" ID = "zero_button" value = "!" onclick="inputext('!(')">
+        <input type="button" ID = "zero_button" value = "파이" onclick="inputext('PI()')">
+        <input type="button" ID = "zero_button" value = "," onclick="inputext(',')">
+        <input type="button" ID = "zero_button" value = "반올림" onclick="inputext('반올림(')">
+        <input type="button" ID = "zero_button" value = "함수끝" onclick="inputext(')')">
+        <br>
+        <input type="button" ID = "number_button" value = "7" onclick="inputext(7)">
+        <input type="button" ID = "number_button" value = "8" onclick="inputext(8)">
+        <input type="button" ID = "number_button" value = "9" onclick="inputext(9)">
+        <input type="button" ID = "code_button" value = "%" onclick="inputext('%')">
+        <input type="button" ID = "code_button" value = "C" onclick="remove()">
+        <br>
+        <input type="button" ID = "number_button" value = "4" onclick="inputext(4)">
+        <input type="button" ID = "number_button" value = "5" onclick="inputext(5)">
+        <input type="button" ID = "number_button" value = "6" onclick="inputext(6)">
+        <input type="button" ID = "code_button" value = "+" onclick="inputext('+')">
+        <input type="button" ID = "code_button" value = "-" onclick="inputext('-')">
+        <br>
+        <input type="button" ID = "number_button" value = "1" onclick="inputext(1)">
+        <input type="button" ID = "number_button" value = "2" onclick="inputext(2)">
+        <input type="button" ID = "number_button" value = "3" onclick="inputext(3)">
+        <input type="button" ID = "code_button" value = "x" onclick="inputext('*')">
+        <input type="button" ID = "code_button" value = "/" onclick="inputext('/')">
+        <br>
+        <input type="button" ID = "code_button" value = "." onclick="inputext('.')">
+        <input type="button" ID = "number_button" value = "0" onclick="inputext(0)">
+        <input type="button" ID = "code_button" value = "(" onclick="inputext('(')">
+        <input type="button" ID = "code_button" value = ")" onclick="inputext(')')">
+        <input type="button" ID = "code_button" value = "=" onclick="calculate()">
+    </div>
+<p1>
+<br>
+파란 버튼은 함수(숫자)이어야 작동을 합니다.
+</p1>
+</center>
+</body>
+</html>
